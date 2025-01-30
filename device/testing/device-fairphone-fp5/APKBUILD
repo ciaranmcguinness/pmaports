@@ -11,14 +11,12 @@ options="!check !archcheck"
 depends="
 	firmware-fairphone-fp5-adreno
 	firmware-fairphone-fp5-adsp
-	firmware-fairphone-fp5-bluetooth
 	firmware-fairphone-fp5-cdsp
 	firmware-fairphone-fp5-hexagonfs
 	firmware-fairphone-fp5-ipa
 	firmware-fairphone-fp5-modem
 	firmware-fairphone-fp5-venus
 	firmware-fairphone-fp5-wpss
-	firmware-qcom-adreno-a660
 	hexagonrpcd
 	hexagonrpcd-openrc
 	linux-postmarketos-qcom-sc7280
