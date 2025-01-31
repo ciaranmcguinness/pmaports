@@ -22,7 +22,12 @@ subpackages="
 	$pkgname-openrc
 	$pkgname-qbootctl
 	$pkgname-qbootctl-openrc:qbootctl_openrc
+	$pkgname-unl0kr
 	$pkgname-vulkan
+"
+
+source="
+	10-unl0kr.conf
 "
 
 package() {
@@ -55,6 +60,11 @@ qbootctl_openrc() {
 	mkdir -p "$subpkgdir"
 }
 
+unl0kr() {
+	install -Dm644 "$srcdir"/10-unl0kr.conf -t \
+		"$pkgdir"/etc/unl0kr.conf.d
+}
+
 vulkan() {
 	pkgdesc="Vulkan support for freedreno"
 	install_if="$pkgname vulkan-loader"
@@ -62,3 +72,6 @@ vulkan() {
 	mkdir "$subpkgdir"
 }
 
+sha512sums="
+f700af3145b79d1ef9edfb22982899b25cabfb212f9620dcbd3a2e6f44b5ad591e0a66056c6fcd66c3fde89a2b5f551e8a8fe2e65cf0e2a48adec57c027d7825  10-unl0kr.conf
+"
